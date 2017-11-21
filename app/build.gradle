@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
     defaultConfig {
-        applicationId "com.example.usage.kbomanager"
+        applicationId "com.example.usage.kbo_manager"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
@@ -28,6 +28,5 @@ dependencies {
     compile 'com.android.support:design:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
-    compile project(':jsoup-1.11.2')
     compile files('jsoup-1.11.2.jar')
 }

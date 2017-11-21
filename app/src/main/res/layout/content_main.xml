@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.usage.kbomanager.MainActivity"
+    tools:context="com.example.usage.kbo_manager.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
     <TextView
@@ -16,10 +17,7 @@
         android:textSize="30sp"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        />
 
     <TextView
         android:id="@+id/dateText"
@@ -28,9 +26,14 @@
         android:text="MM/DD"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        />
+
+    <TextView
+        android:id="@+id/pharsedText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="pharsed Data is here"
+        />
 
 </LinearLayout>

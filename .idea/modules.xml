@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/KBOManager.iml" filepath="$PROJECT_DIR$/KBOManager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/KBO-Manager.iml" filepath="$PROJECT_DIR$/KBO-Manager.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/jsoup-1.11.2/jsoup-1.11.2.iml" filepath="$PROJECT_DIR$/jsoup-1.11.2/jsoup-1.11.2.iml" />
     </modules>
