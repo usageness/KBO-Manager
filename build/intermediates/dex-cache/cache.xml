@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="D:\AndroidProject\KBOManager\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="D:\AndroidProject\KBOManager\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_28a5310365038585f5686962027ba680f13f55eb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\USER-PC\.android\build-cache\0847dfc789d1169d3b40a1903d6269edc7e92e82\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
+        <dex dex="D:\AndroidProject\KBOManager\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_12d39e6c4dfa234c7c929bc101e5d7767109a81a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\USER-PC\.android\build-cache\de3c82b1fa60ba4d64adc98d9d818fc3ecccea0c\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="D:\AndroidProject\KBOManager\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c5558ab180c37522e8c73a94f2df7ec562de0255\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\USER-PC\.android\build-cache\5715bf181fc57e290db4c0caec93e200a5d8c367\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="D:\AndroidProject\KBOManager\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f6204a0941ba3d88711e54a911ce1fd8db00e64e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\USER-PC\.android\build-cache\d6f7ca785b7c907a89ff21cbcf3d481740a7c345\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="D:\AndroidProject\KBOManager\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_64b7a4284e96d13bba6510dec03cf8c916824c7b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\USER-PC\.android\build-cache\b0b4e69a471214202acc60979e7d4acc59d32d4d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="D:\AndroidProject\KBOManager\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b695acb3e8e634094584e10a2ed66af8509ed255\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\USER-PC\.android\build-cache\0fedfbaeb052ce3c6aa375599e9ba33e66f02f30\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="D:\AndroidProject\KBOManager\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c0f2ee537260295712929bcbb9c7273d65ec6112\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\USER-PC\.android\build-cache\b03bcca80ee0716dcf1c331a294cd42aa8383c92\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
+        <dex dex="D:\AndroidProject\KBOManager\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3570d24b5173878040f4bebfd68cecc86ded7115\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\USER-PC\.android\build-cache\1fe3899cd0f53ae37ccce250dc7c6bf045e662ba\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="D:\AndroidProject\KBOManager\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f49dcbb621bf8aacbe5f248e900b9d56f6b4f19a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\USER-PC\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="D:\AndroidProject\KBOManager\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_75f8e469c7b99e0e6354558f97ff48ff4d35ed49\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\USER-PC\.android\build-cache\45f39171e0c1f379613d7f6691b377e7a539c602\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="D:\AndroidProject\KBOManager\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d84478decfb6a284fb76d2c959bb1afa3437508d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\USER-PC\.android\build-cache\c593a75ed5f5167a46d57d091a4fe11e8397424d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="D:\AndroidProject\KBOManager\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_97c14919ed22af3f877f0bb53f673f36ce7f1430\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\USER-PC\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="D:\AndroidProject\KBOManager\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-26.0.0-alpha1_c982c97e8755e6c072e8da60e54720cf41078619\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\USER-PC\.android\build-cache\dc03c9d18573a41f123f467af3934df59f0ce092\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="D:\AndroidProject\KBOManager\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_35d3eeadcefa84dd04d522e5d156c742c19f26be\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\AndroidProject\KBOManager\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="fb885d4e63e447fa0c486a027b603f1e8d2d9cf7">
+        <dex dex="D:\AndroidProject\KBOManager\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_89a13ee9ce1ecbc56d7ce5a3383bb865a489b507\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\USER-PC\.android\build-cache\2422ba31bbb9c113641e20ffb97e0054f47e812e\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\AndroidProject\KBOManager\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a17b198e5e81e8e860969e85c75ff6a8f79c8b0e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\USER-PC\.android\build-cache\0e68016db81d28e0c56454d18f4be6370ec62d1a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="D:\AndroidProject\KBOManager\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_6a995eef0f7bb73d7750508713d08f7067d7de8a\classes.dex" />
+    </item>
+
+</items>
