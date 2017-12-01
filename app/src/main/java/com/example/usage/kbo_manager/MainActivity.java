@@ -1,5 +1,9 @@
 package com.example.usage.kbo_manager;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -13,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.jsoup.Jsoup;
 
@@ -23,6 +28,8 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private TextView pharsedText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +60,8 @@ public class MainActivity extends AppCompatActivity
 
         TextView mainText = (TextView) findViewById(R.id.mainText);
         TextView dateText = (TextView) findViewById(R.id.dateText);
-        final TextView pharsedText = (TextView) findViewById(R.id.pharsedText);
+        pharsedText = (TextView) findViewById(R.id.pharsedText);
+
         Calendar calendar = new GregorianCalendar(Locale.KOREA);
         int nMonth = calendar.get(Calendar.MONTH) + 1;
         int nDay = calendar.get(Calendar.DAY_OF_MONTH);
@@ -62,72 +70,107 @@ public class MainActivity extends AppCompatActivity
         mainText.setText("오늘의 경기");
         dateText.setText(today);
 
-        // 여기서부터 파싱 부분
+        exportData();
+    }
 
-        new Thread() {
-            public void run() {
-                org.jsoup.nodes.Document doc = null;
-                try {
-                    doc = Jsoup.connect("http://www.koreabaseball.com/TeamRank/TeamRank.aspx").get();
-                    String text = doc.select("table").text();
-                    StringBuffer tex = new StringBuffer(text);
-                    tex.insert(0, "******리그순위표******\n");
+    public void exportData() {
+        String leagueURL = "http://www.koreabaseball.com/TeamRank/TeamRank.aspx";
 
-                    int Check = 0;
-                    int CheckTeam = 0;
-                    int i = 0;
+        try {
+            ConnectivityManager conManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo netInfo = conManager.getActiveNetworkInfo();
 
-                    for (i = 0; CheckTeam < 11; i++) {
-                        if (tex.charAt(i) == ' ')
-                            Check += 1;
-                        if (Check == 12) {
-                            CheckTeam += 1;
-                            Check = 0;
-                            tex = tex.insert(i + 1, "\n");
-                        }
+            if(netInfo != null && netInfo.isConnected()) {
+                new leagueRank().execute(leagueURL);
+            }else {
+                Toast toast = Toast.makeText(getApplicationContext(), "네트워크가 연결되지 않았음", Toast.LENGTH_LONG);
+                toast.show();
+            }
+
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private class leagueRank extends AsyncTask<String, String, String> {
+        @Override
+        protected String doInBackground(String... arg0) {
+            try {
+                return (String)getData((String) arg0[0]);
+            } catch (Exception e) {
+                return "Network connect failed";
+            }
+        }
+
+        protected void onPostExecute(String result) {
+            pharsedText.setText(result);
+        }
+
+        private String getData(String leagueURL) {
+
+            org.jsoup.nodes.Document doc = null;
+            String leagueTable = "";
+            int Check = 0;
+            int CheckTeam = 0;
+            int i = 0;
+
+            try {
+                doc = Jsoup.connect(leagueURL).get();
+                String text = doc.select("table").text();
+                StringBuffer tex = new StringBuffer(text);
+                tex.insert(0, "******리그순위표******\n");
+
+                for (i = 0; CheckTeam < 11; i++) {
+                    if (tex.charAt(i) == ' ')
+                        Check += 1;
+                    if (Check == 12) {
+                        CheckTeam += 1;
+                        Check = 0;
+                        tex = tex.insert(i + 1, "\n");
                     }
-
-                    String rank = new String(tex.substring(0, i));
-                    StringBuffer winlose = new StringBuffer(tex.substring(i));
-
-                    winlose.insert(0, "\n\n******팀간승패표******");
-
-                    int j = 0;
-                    Check = 0;
-                    CheckTeam = 0;
-
-                    for (Check = 0; CheckTeam < 1; j++) {
-                        if (winlose.charAt(j) == ' ')
-                            Check += 1;
-                        if (Check == 22) {
-                            winlose = winlose.insert(j + 1, "\n");
-                            CheckTeam += 1;
-                        }
-                    }
-
-                    Check = 0;
-                    CheckTeam = 0;
-
-                    for (Check = 0; CheckTeam < 9; j++) {
-                        if (winlose.charAt(j) == ' ')
-                            Check += 1;
-                        if (Check == 12) {
-                            winlose = winlose.insert(j + 1, "\n");
-                            Check = 0;
-                            CheckTeam += 1;
-                        }
-                    }
-
-                    pharsedText.setText(rank + "\n" + winlose);
-
-                } catch (IOException e)
-
-                {
-                    e.printStackTrace();
                 }
 
+                String rank = new String(tex.substring(0, i));
+                StringBuffer winlose = new StringBuffer(tex.substring(i));
+
+                winlose.insert(0, "\n\n******팀간승패표******");
+
+                int j = 0;
+                //Check = 0;
+                CheckTeam = 0;
+
+                for (Check = 0; CheckTeam < 1; j++) {
+                    if (winlose.charAt(j) == ' ')
+                        Check += 1;
+                    if (Check == 22) {
+                        winlose = winlose.insert(j + 1, "\n");
+                        CheckTeam += 1;
+                    }
+                }
+
+               //Check = 0;
+                CheckTeam = 0;
+
+                for (Check = 0; CheckTeam < 9; j++) {
+                    if (winlose.charAt(j) == ' ')
+                        Check += 1;
+                    if (Check == 12) {
+                        winlose = winlose.insert(j + 1, "\n");
+                        Check = 0;
+                        CheckTeam += 1;
+                    }
+                }
+
+
+                leagueTable = rank + "\n" + winlose;
+
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        };
+
+            return leagueTable;
+        }
+
     }
 
     @Override
@@ -187,3 +230,4 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 }
+
